@@ -8,7 +8,7 @@ function customRender(reactElement, mainContainer){
     const domElement = document.createElement(reactElement.type)
     domElement.innerHTML = reactElement.children(reactElement.type)
     for (const prop in props) {
-        if (prop == children) {
+        if (prop === 'children') {
             continue;
         }
         domElement.setAttribute(prop, reactElement.props[prop])
