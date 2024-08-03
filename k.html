@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addValue()">add</button>
+    <div id="k"></div>
+    <div id="k2"></div>
+    <div id="k3"></div>
+    <div id="k4"></div>
+</body>
+<script>
+    let c = 5;
+    document.getElementById("k").innerHTML = c;
+    document.getElementById("k2").innerHTML = c;
+    document.getElementById("k3").innerHTML = c;
+    document.getElementById("k4").innerHTML = c;
+    function addValue() {
+        c++;
+        console.log(c, Math.random());
+        document.getElementById("k").innerHTML = c;
+
+    }
+</script>
+</html>
