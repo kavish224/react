@@ -64,7 +64,7 @@ function App() {
                                 Convert {from.toUpperCase()} to {to.toUpperCase()}
                             </button>
                             <div className="w-full bg-orange-500 text-white px-4 py-3 rounded-lg mt-2.5 text-center">
-                                1 {from.toUpperCase()} = {(currencyInfo[to]).toFixed(3)} {to.toUpperCase()}
+                                1 {from.toUpperCase()} = {currencyInfo[to]} {to.toUpperCase()}
                             </div>
                             <button type="reset" className="w-full bg-orange-500 text-white px-4 py-3 rounded-lg mt-2.5" onClick={(e) => { e.preventDefault(), setAmount(""), setConvertedAmount(""), setFrom("usd"), setTo("inr") }} >
                                 Reset
