@@ -3,7 +3,7 @@ function App() {
   const [length, setLength] = useState("8");
   const [numberAllowed, setNumberAllowed] = useState(true);
   const [characterAllowed, setCharacterAllowed] = useState(true);
-  const [password, setPassword] = useState();
+  const [password, setPassword] = useState("");
   const passwordRef = useRef(null);
 
   const passwordGenerator = useCallback(() => {
@@ -15,7 +15,7 @@ function App() {
     if (characterAllowed) {
       str += "!@#$^&*";
     }
-    for (let i = 0; i <= length; i++) {
+    for (let i = 0; i < length; i++) {
       let char = Math.floor(Math.random() * str.length + 1);
       pass += str.charAt(char);
     }
