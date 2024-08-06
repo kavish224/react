@@ -30,14 +30,17 @@ function App() {
   return (
     <>
       <h1 className="text-4xl text-center text-white pt-8">Password Generator</h1>
-      <div className="w-full max-w-md mx-auto shadow-lg rounded-3xl px-5 py-2.5 my-9 text-orange-400 bg-gray-600 pt-5 ">
+      <div className="w-full max-w-md mx-auto shadow-lg rounded-3xl px-5 py-2.5 my-9 bg-gray-600 pt-5 ">
         <div className="flex shadow-lg rounded-3xl overflow-hidden mb-4 ">
-          <input type="text" value={password} className="outline-none w-full py-1 px-3" placeholder="Password" readOnly ref={passwordRef} />
+          <input type="text" value={password} className="outline-none w-full py-1 px-3 text-orange-500" placeholder="Password" readOnly ref={passwordRef} />
           <button className="outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0" onClick={copyPass}>Copy</button>
         </div>
-        <div className="flex items-center gap-x-1">
+        <button type="submit" className="w-full bg-orange-500 text-white px-2 py-1 rounded-lg" onClick={(e) => passwordGenerator()}>
+          Regenerate
+        </button>
+        <div className="flex items-center gap-x-1 text-white">
           <label>Length: {length}</label>
-          <input type="range" min={8} max={100} value={length} className=" cursor-pointer" onChange={(e) => { setLength(e.target.value) }} />
+          <input type="range" min={4} max={100} value={length} className=" cursor-pointer" onChange={(e) => { setLength(e.target.value) }} />
           <div className="flex items-center gap-x-1">
             <label htmlFor="numberInput" className="py-2 pr-1" >Numbers</label>
             <input type="checkbox" defaultChecked={numberAllowed} id="numberInput" onChange={() => { setNumberAllowed((prev) => !prev) }} />
