@@ -4,7 +4,7 @@ import { Container, PostCard } from '../components'
 function Home() {
     const [post, setPost] = useState([])
     useEffect(() => {
-        service.getPost().then((post) => {
+        service.getPosts().then((post) => {
             if (post) {
                 setPost(post.documents)
             }

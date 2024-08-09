@@ -49,14 +49,14 @@ export class Service {
     }
     async deletePost(slug) {
         try {
-            return await this.databases.deleteDocument(
+            await this.databases.deleteDocument(
                 conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
                 slug,
             );
             return true;
         } catch (error) {
-            throw error;
+            console.log(error);
             return false;
         }
     }
@@ -68,7 +68,7 @@ export class Service {
                 slug,
             );
         } catch (error) {
-            throw error;
+            console.log(error);
             return false;
         }
     }
@@ -80,7 +80,7 @@ export class Service {
                 query,
             );
         } catch (error) {
-            throw error;
+            console.log(error);
             return false;
         }
     }
@@ -104,7 +104,7 @@ export class Service {
             );
             return true;
         } catch (error) {
-            throw error;
+            console.log(error);
             return false;
         }
     }
