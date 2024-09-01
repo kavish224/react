@@ -7,23 +7,15 @@ function App() {
   let [counter, setCounter ] = useState(5)
   const addValue = () => {
     // counter++;
-    setCounter(counter => counter+1)
-    setCounter(counter => counter+1)
-    setCounter(counter => counter+1)
-    setCounter(counter => counter+1)
-    setCounter(counter => counter+1)
-    console.log("added", counter);
+    setCounter(counter => counter+1);
   }
   const removeValue = () => {
     if(counter <= 0){
       console.log("negative not allowed break");
-      return setCounter(0)
-      
+      return setCounter(0) 
     }
     counter--;
     setCounter(counter);
-    console.log("rmoved", counter);
-    
   }
   return (
     <>
